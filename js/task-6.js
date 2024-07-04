@@ -33,7 +33,6 @@ function getRandomHexColor() {
       if (isNaN(amount) || amount < 1 || amount > 100) return;
       createBoxes(amount);
       input.value ='';  
-      destroyBox();
     });
 
     destroyButton.addEventListener('click', destroyBox);
