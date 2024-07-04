@@ -21,14 +21,21 @@ function getRandomHexColor() {
     }
     boxesContainer.appendChild(element);
   }
-    createButton.addEventListener('click', (event) => {
+
+
+  function destroyBox() {
+    boxesContainer.innerHTML ='';
+  }
+  
+  
+  createButton.addEventListener('click', () => {
       const amount = parseInt(input.value, 10);
-      if (amount > 101) return;
+      if (isNaN(amount) || amount < 1 || amount > 100) return;
       createBoxes(amount);
-      input.value ='';  });
+      input.value ='';  
+      destroyBox();
+    });
 
     destroyButton.addEventListener('click', destroyBox);
    
-    function destroyBox() {
-      boxesContainer.innerHTML ='';
-    }
+ 
