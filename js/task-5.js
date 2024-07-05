@@ -8,9 +8,10 @@ const bodyColor = document.querySelector('body');
 const spanColor = document.querySelector('.color');
 
 function hendlchangeColor() {
-
-   bodyColor.style.backgroundColor = getRandomHexColor();
-   spanColor.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  bodyColor.style.backgroundColor = randomColor;
+  spanColor.textContent = randomColor;
 };
 
 changeColor.addEventListener('click', hendlchangeColor);
+
