@@ -31,6 +31,7 @@ const boxesContainer = document.querySelector('#boxes');
     createButton.addEventListener('click', () => {
       const amount = parseInt(input.value, 10);
       if (isNaN(amount) || amount < 1 || amount > 100) return;
+      destroyBox();
       createBoxes(amount);
       input.value ='';  
     });
